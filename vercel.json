@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./roast_bot_web.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "./roast_bot_web.py"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "./"
+  },
+  "functions": {
+    "./roast_bot_web.py": {
+      "runtime": "python3.9"
+    }
+  }
+}
